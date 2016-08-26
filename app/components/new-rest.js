@@ -9,10 +9,10 @@ export default Ember.Component.extend({
         cuisine: this.get('cuisine'),
         image: this.get('image')
       };
-      this.sendAction('createRest', params)
-      this.set('name', '')
-      this.set('cuisine', '')
-      this.set('image', '')
+      this.sendAction('createRest', params);
+      this.set('name', '');
+      this.set('cuisine', '');
+      this.set('image', '');
     },
     updateRestaurants() {
       this.set('updateRestaurants', true);

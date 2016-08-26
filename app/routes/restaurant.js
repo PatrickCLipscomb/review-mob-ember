@@ -12,8 +12,8 @@ export default Ember.Route.extend({
       restaurant.get('ratings').addObject(newRating);
       newRating.save().then(function() {
         return restaurant.save();
-      })
-      this.transitionTo('user')
+      });
+      this.transitionTo('user');
     }
   }
 });

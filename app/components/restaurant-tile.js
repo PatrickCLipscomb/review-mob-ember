@@ -7,7 +7,7 @@ export default Ember.Component.extend({
     var runningScore = 0;
     this.get('restaurant').get('ratings').forEach(function(rating) {
       runningScore += parseInt(rating.get('score'));
-    })
+    });
     return runningScore / this.get('restaurant').get('ratings').get('length');
   }),
   actions: {
@@ -22,7 +22,7 @@ export default Ember.Component.extend({
         restaurant: this.get('restaurant'),
       };
       this.sendAction('createRating', params);
-      this.set('giveRating', false)
+      this.set('giveRating', false);
     },
     seeReviews() {
       this.toggleProperty('seeReviews');

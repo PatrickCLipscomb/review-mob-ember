@@ -14,7 +14,7 @@ export default Ember.Component.extend({
         restaurant: this.get('model'),
       };
       this.sendAction('createRating', params);
-      this.set('giveRating', false)
+      this.set('giveRating', false);
     }
   }
 });
