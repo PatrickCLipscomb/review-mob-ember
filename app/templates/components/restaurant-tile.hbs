@@ -5,10 +5,31 @@
     <p>
       {{restaurant.cuisine}}
     </p>
-    <button class="btn btn-primary">See this Restaurant's Reviews</button>
+    <p>
+      AverageRating:
+    </p>
+    <p>
+      {{averageRating}}
+    </p>
+    <button class="btn btn-primary" {{action 'seeReviews'}}>See this Restaurant's Reviews</button>
+    {{#if seeReviews}}
+      {{#each restaurant.ratings as |rating|}}
+      <p>
+        {{rating.note}} -- {{rating.author}}
+      </p>
+      <p>
+        {{rating.score}}
+      </p>
+      {{/each}}
+    {{else}}
     <button class="btn btn-danger" {{action 'addToList' restaurant}}>Add Restaurant to Your List</button>
-  </div>
   {{#link-to 'restaurant' restaurant}}
     <button class="btn btn-info">Leave a Review</button>
   {{/link-to}}
+    {{/if}}
+    <br>
+    <h4>
+      Well Reviewed? {{restaurant-rating restaurant}}
+    </h4>
+  </div>
 </div>

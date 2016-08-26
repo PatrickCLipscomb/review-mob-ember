@@ -9,6 +9,7 @@ Router.map(function() {
   this.route('admin');
   this.route('user');
   this.route('restaurant', {path: '/restaurant/:restaurant_id'});
+  this.route('myRests');
 });
 
 export default Router;

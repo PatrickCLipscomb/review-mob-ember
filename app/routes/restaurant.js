@@ -13,6 +13,7 @@ export default Ember.Route.extend({
       newRating.save().then(function() {
         return restaurant.save();
       })
+      this.transitionTo('user')
     }
   }
 });
