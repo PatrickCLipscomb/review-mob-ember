@@ -42,3 +42,13 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+.map-display {
+  width: 600px;
+  height: 600px;
+}
+
+.map-set {
+  width: 600px;
+  height: 600px;
+}
