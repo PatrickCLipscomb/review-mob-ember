@@ -1,0 +1,11 @@
+<br><br>
+<div align=middle>
+<h1>Restaurants to Review</h1>
+</div>
+<div class="container">
+  <div class="browse" align="center">
+      {{#each restaurants as |restaurant|}}
+      {{restaurant-tile restaurant=restaurant createRating='createRating'}}
+      {{/each}}
+  </div>
+</div>

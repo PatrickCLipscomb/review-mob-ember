@@ -1,0 +1,70 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-2 col-xs-offset-5">
+      <div align="middle" class="review restaurant-tile">
+        <div class="restaurant-content">
+          <img class="restaurant-image" src={{model.image}} alt={{model.name}} />
+          <h3>{{model.name}}</h3>
+          <p>
+            {{model.cuisine}}
+          </p>
+        </div>
+        <hr>
+        <div class="form-inline">
+          <h4>How was your experience?</h4>
+          <div>
+        {{#radio-button
+          value=5
+          groupValue=score
+          changed="scoreToggled"}}
+          Great
+        {{/radio-button}}
+      </div>
+        <div>
+        {{#radio-button
+          value=4
+          groupValue=score
+          changed="scoreToggled"}}
+          Good
+        {{/radio-button}}
+      </div>
+        <div>
+        {{#radio-button
+          value=3
+          groupValue=score
+          changed="scoreToggled"}}
+          Okay
+        {{/radio-button}}
+      </div>
+        <div>
+        {{#radio-button
+          value=2
+          groupValue=score
+          changed="scoreToggled"}}
+          Mediocre
+        {{/radio-button}}
+      </div>
+        <div>
+        {{#radio-button
+          value=1
+          groupValue=score
+          changed="scoreToggled"}}
+          Terrible
+        {{/radio-button}}
+      </div>
+          <label for="note">Please provide a comment</label>
+          {{textarea class="rating-create" value=rating.note id="note"}}
+          <label for="author">Please enter your name</label>
+          {{input class="rating-create" value=author id="author"}}
+        <br><br>
+        <button {{action 'createRating'}} class="btn btn-success">Save</button>
+        </div>
+      </div>
+      <br><br>
+      {{#link-to 'user'}}
+      <button class="btn btn-danger btn-lg rest-update">Return to Restaurant List</button>
+      {{/link-to}}
+    </div>
+  </div>
+</div>

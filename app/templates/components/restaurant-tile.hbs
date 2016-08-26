@@ -1,0 +1,14 @@
+<div align="middle" class="restaurant-tile">
+  <div class="restaurant-content">
+    <img class="restaurant-image" src={{restaurant.image}} alt={{restaurant.name}} />
+    <h3>{{restaurant.name}}</h3>
+    <p>
+      {{restaurant.cuisine}}
+    </p>
+    <button class="btn btn-primary">See this Restaurant's Reviews</button>
+    <button class="btn btn-danger" {{action 'addToList' restaurant}}>Add Restaurant to Your List</button>
+  </div>
+  {{#link-to 'restaurant' restaurant}}
+    <button class="btn btn-info">Leave a Review</button>
+  {{/link-to}}
+</div>

@@ -1,0 +1,7 @@
+{
+  "restaurants": [{
+    "name": "Burgerville",
+    "cuisine": "fast-food",
+    "image": "null"
+    }]
+}

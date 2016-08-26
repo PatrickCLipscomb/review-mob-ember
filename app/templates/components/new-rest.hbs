@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="row">
+    <div align="middle" class="form-group col-sm-6">
+      <h3>Please enter the following information...</h3>
+      <div class="form-control">
+        <label for="name">Name of Restaurant</label>
+        {{input value=name id="name"}}
+      </div>
+      <div class="form-control">
+        <label for="cuisine">Type of Cuisine</label>
+        {{input value=cuisine id="cuisine"}}
+      </div>
+      <div class="form-control">
+        <label for="image">Thumbnail Image</label>
+        {{input value=image id="image"}}
+      </div>
+      <br>
+      <button class="btn btn-success rest-update btn-lg" {{action 'createRest'}}>Add Restaurant</button>
+      <br><br><br><br><br>
+      <button class="btn btn-danger btn-lg rest-update"{{action 'updateRestaurants'}}>Update Restaurants</button>
+      {{#if updateRestaurants}}
+      <button class="btn btn-primary btn-lg rest-update"{{action 'updateRestaurantsDone'}}>Done Updating</button>
+      {{/if}}
+    </div>
+    <div align="middle" class="col-sm-6">
+      <h3>List of Current Restaurants:</h3>
+      <div class="well ">
+        {{#each restaurants as |restaurant|}}
+        {{restaurant.name}} -- {{restaurant.cuisine}}
+        <img class="thumbnail" src={{restaurant.image}} alt=restaurant.name />
+        {{#if updateRestaurants}}
+        <div align="center" class="form-group">
+          {{input class="restaurant-update" value=restaurant.name placeholder=restaurant.name}}
+          {{input class="restaurant-update" value=restaurant.cuisine placeholder=restaurant.cuisine}}
+          <label for="restaurant.image">Image URL</label>
+          {{input class="restaurant-update" value=restaurant.image id="restaurant.image"}}
+          <button {{action 'saveUpdate' restaurant}}>Save</button>
+        </div>
+        {{/if}}
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,44 @@
+#dash-div {
+  margin-top: 30%;
+}
+
+.thumbnail {
+  max-width: 90%;
+  margin-top: 20px;
+}
+
+#home-button {
+  max-width: 60px;
+}
+
+.restaurant-tile {
+  background-color: white;
+  padding-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+  border: 2px solid silver;
+  width: 310px;
+}
+
+.browse {
+  margin-bottom: 5%;
+  padding-top: 5%;
+  background-color: #EDEDED;
+  padding-bottom: 5%;
+}
+
+.restaurant-image {
+  max-width: 300px;
+  padding-top: 20px;
+  align: middle;
+}
+
+.rest-update {
+  border: 3px solid yellow;
+}
+
+.review {
+  margin-left: auto;
+  margin-right: auto;
+}
