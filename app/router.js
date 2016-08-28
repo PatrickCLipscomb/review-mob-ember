@@ -7,7 +7,9 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('admin');
-  this.route('user');
+  this.route('user', function() {
+    this.route('searched', {path: '/:restaurant_id'});
+  });
   this.route('restaurant', {path: '/restaurant/:restaurant_id'});
   this.route('myRests');
 });

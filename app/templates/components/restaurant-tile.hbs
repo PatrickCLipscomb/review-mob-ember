@@ -13,14 +13,19 @@
     </p>
     <button class="btn btn-primary" {{action 'seeReviews'}}>See this Restaurant's Reviews</button>
     {{#if seeReviews}}
+    <br><br>
+    <ol align="left">
       {{#each restaurant.ratings as |rating|}}
+      <li>
       <p>
         {{rating.note}} -- {{rating.author}}
       </p>
       <p>
-        {{rating.score}}
+        Score: {{rating.score}}
       </p>
+    </li>
       {{/each}}
+    </ol>
     {{else}}
     <button class="btn btn-danger" {{action 'addToList' restaurant}}>Add Restaurant to Your List</button>
   {{#link-to 'restaurant' restaurant}}
